@@ -2,9 +2,9 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 
-export default function SearchBox({ handleResponse, handleError }) {
+export default function SearchBox({ handleResponse }) {
   const URL = "https://api.openweathermap.org/data/2.5/weather";
-  const API_KEY = "67df9650ba82815e2ac6a79781b188c3";
+  const API_KEY = process.env.Api_key;
   let [city, setCity] = useState("");
   let [error, setError] = useState(false);
 
